@@ -16,6 +16,19 @@ class FormApp extends CI_Controller
     }
     public function insert()
     {
-        echo "Form Kayıt İşlemi";
+        //echo "Form Kayıt İşlemi" ;
+        $data = array(
+            "name"      => $this->input->post("name"),
+            "email"     => $this->input->post("email"),
+            "service"   => $this->input->post("service"),
+            "budget"    => $this->input->post("budget"),
+            "message"   => $this->input->post("message")
+        );
+
+        $this->load->model("FormApp_Model");
+        $insert = $this->FormApp_Model->insert($data);
+        if ($insert) {
+            echo "Kayıt işlemi başarılı.";
+        }
     }
 }

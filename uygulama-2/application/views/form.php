@@ -33,7 +33,8 @@
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<form method="POST" 
-			action="<?php echo base_url("formApp/insert") ?> " class="contact100-form validate-form">
+			action="<?php echo base_url("formApp/insert") ?> " 
+			class="contact100-form validate-form">
 				<span class="contact100-form-title">
 					Formu doldurunuz.
 				</span>
@@ -69,9 +70,9 @@
 					<div>
 						<select class="selection-2" name="budget">
 							<option>Maaş Seçiniz</option>
-							<option>5500 TL</option>
-							<option>6000 TL</option>
-							<option>4500 TL</option>
+							<option value="5500">5500 TL</option>
+							<option value="6000">6000 TL</option>
+							<option value="4500">4500 TL</option>
 						</select>
 					</div>
 					<span class="focus-input100"></span>
